@@ -1,5 +1,5 @@
-﻿using DiscordRPC;
-using System;
+﻿using System;
+using DiscordRPC;
 
 namespace UsefulTools
 {

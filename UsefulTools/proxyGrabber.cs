@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Net;
 using System.IO;
+using System.Net;
 
 namespace UsefulTools
 {
     internal class proxyGrabber
     {
-        public proxyGrabber()
+        public proxyGrabber(string url)
         {
             try
             {
-                var request = WebRequest.Create("https://api.proxyscrape.com?request=getproxies&proxytype=http&timeout=5000");
+                var request = WebRequest.Create(url);
                 var response = request.GetResponse();
                 var stream = response.GetResponseStream();
                 var reader = new StreamReader(stream);
